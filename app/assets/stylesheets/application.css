@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: verdana, arial, helvetica, sans-serif;
+  color: black;
+}
+
+#wrapper {
+  margin: 40px 40px;
+}
+
+.link > a:hover {
+  color: white;
+  background-color: black;
+}
+
+/* ==== topビューのスタイル ==== */
+.top-title {
+  margin-bottom: 1em;
+}
+
+.top-text, .top-link {
+  margin-left: 40px;
+}
+
+.top-text {
+  margin-bottom: 1em;
+}
