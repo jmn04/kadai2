@@ -1,12 +1,18 @@
+<!--ラッパー-->
 <div id="wrapper">
-    <%= flash[:notice] %>
-    <h4>title</h4>
-    <p><%= @book.title %></p>
     
-    <h4>body</h4>
-    <p><%= @book.body %></p>
+    <!--book作成・更新成功通知-->
+    <div id="notice">
+        <%= flash[:notice] %>
+    </div>
     
-    <p class="link"><%= link_to "Back", :back %></p>
-    <p class="link"><%= link_to "Edit", edit_book_path(@book.id) %></p>
-    <p class="link"><%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %></p>
+    <!--bookタイトル-->
+    <h4 class="show-info">title : <span><%= @book.title %></span></h4>
+    <!--bookボディ-->
+    <h4 class="show-info">body : <span><%= @book.body %></span></h4>
+    
+    <!--各種リンク-->
+    <span class="link edit"><%= link_to "Edit", edit_book_path(@book.id) %></span>
+    <span class="link back"><%= link_to "Back", "/books" %></span>
+    
 </div>

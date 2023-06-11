@@ -1,15 +1,43 @@
+<!--ラッパー-->
 <div id="wrapper">
-  <%= form_with model: @book do |f| %>
-    <h4>タイトル</h4>
-    <%= f.text_field :title %>
-    <h4>本文</h4>
-    <%= f.text_area :body %>
-    <%= f.submit 'Update Book' %>
-  <% end %>
-  <% @books.each do |book| %>
-  <div class="link-div">
-    <p class="link"><%= link_to "Show", book_path(book.id) %></p>
-    <p class="link"><%= link_to "Back", "/books" %></p>
+  
+  <!--タイトル-->
+  <h1 class="edit-title">Editing Book</h1>
+  
+  <!--エラー表示-->
+  <div id="errors">
+    <% if @book.errors.any? %>
+      <p id="error-message"><%= @book.errors.count %>error prohibited this book from being saved:</p>
+      <ul　id="error-list">
+        <% @book.errors.full_messages.each do |message| %>
+          <li id="error-point"><%= message %></li>
+        <% end %>
+      </ul>
+    <% end %>
   </div>
+  
+  <!--form_with部分-->
+  <%= form_with model: @book do |f| %>
+  
+    <!--タイトル-->
+    <div class="area">
+      <h4>Title</h4>
+      <%= f.text_field :title %>
+    </div>
+    
+    <!--ボディ-->
+    <div class="area">
+      <h4>Body</h4>
+      <%= f.text_area :body %>
+    </div>
+    
+    <!--更新ボタン-->
+    <p class="btn"><%= f.submit 'Update Book' %></p>
+    
   <% end %>
+  
+  <!--各種リンク-->
+  <span class="link show"><%= link_to "Show", book_path(@book.id) %></span>
+  <span class="link back"><%= link_to "Back", "/books" %></span>
+  
 </div>

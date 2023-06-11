@@ -26,9 +26,18 @@
   margin: 40px 40px;
 }
 
+#notice {
+  padding: 18px 0;
+  color: green;
+}
+
 .link > a:hover {
   color: white;
   background-color: black;
+}
+
+.area {
+  margin-bottom: 10px;
 }
 
 /* ==== topビューのスタイル ==== */
@@ -42,4 +51,93 @@
 
 .top-text {
   margin-bottom: 1em;
+}
+
+/* ==== indexビューのスタイル ==== */
+.page-title {
+  margin-bottom: 0.75em;
+}
+
+#book-table {
+  padding-bottom: 48px;
+}
+
+#book-table > thead > tr > .title,
+#book-table > tbody > tr > .title {
+  width: 360px;
+}
+
+#book-table > thead > tr > .body,
+#book-table > tbody > tr > .body {
+  width: 620px;
+}
+
+#book-table > thead > tr > th {
+  padding-bottom: 10px;
+}
+
+#book-table > tbody > tr > td {
+  padding: 0 20px 10px 0;
+}
+#book-table > tbody > tr > td:last-child {
+  padding-right: 0;
+}
+
+.create-title {
+  margin-bottom: 14px;
+}
+
+#errors {
+  margin-bottom: 20px;
+}
+
+#error-message {
+  padding: 14px;
+  background-color: red;
+  color: white;
+}
+
+#error-list {
+  padding: 10px;
+}
+
+#error-message,
+#error-list,
+#error-point {
+  width: 600px;
+}
+
+#error-point {
+  padding: 10px;
+  border-left: 4px solid red;
+  border-right: 4px solid red;
+}
+
+#error-point:last-child {
+  border-bottom: 4px solid red;
+}
+
+/* ==== showビューのスタイル ==== */
+.show-info {
+  margin-bottom: 2em;
+}
+
+.show-info > span {
+  font-weight: normal;
+}
+
+.edit,
+.show {
+  padding-right: 10px;
+  margin-right: 10px;
+  border-right: 1px solid black;
+}
+
+/* ==== editビューのスタイル ==== */
+.edit-title {
+  margin-bottom: 1em;
+}
+
+.btn {
+  margin-bottom: 10px;
 }
